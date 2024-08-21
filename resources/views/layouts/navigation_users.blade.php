@@ -1,8 +1,9 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
-            <div class="flex">
+            <div class="flex space-x-4 items-center">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}">
@@ -10,12 +11,14 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('post.index')" :active="request()->routeIs('post.index')" class="text-decoration-none">
-                        {{ __('掲示板') }}
-                    </x-nav-link>
+                <div>
+                    <span class="font-bold text-xl text-gray-800">新規事業飲食店支援アプリ
+                    </span>
                 </div>
+                    
+
+                <!-- Navigation Links -->
+                
             </div>
 
             <!-- Settings Dropdown -->
@@ -54,12 +57,10 @@
                 </x-dropdown>
                 @else
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('register')" :active="request()->routeIs('register')" class="text-decoration-none">
-                        {{ __('Register') }}
-                    </x-nav-link>
+                    
 
-                    <x-nav-link :href="route('login')" :active="request()->routeIs('login')" class="text-decoration-none">
-                        {{ __('Login') }}
+                    <x-nav-link :href="route('login')" :active="request()->routeIs('login')" class="box-link">
+                        {{ __('マイページ') }}
                     </x-nav-link>
                 </div>
                 @endauth

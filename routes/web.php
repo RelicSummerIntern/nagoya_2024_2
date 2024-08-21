@@ -23,6 +23,14 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+Route::get("/template/users", function (){
+    return view('layouts.commons_users');
+});
+
+Route::get("/template/stores", function (){
+    return view('layouts.commons_stores');
+});
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
