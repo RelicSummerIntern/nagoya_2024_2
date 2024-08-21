@@ -23,6 +23,15 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+
+Route::get("/template/users", function (){
+    return view('layouts.commons_users');
+});
+
+Route::get("/template/stores", function (){
+    return view('layouts.commons_stores');
+});
+
 Route::get('/store-register', function () {
     return view('store-register');
 })->name('store-register');
