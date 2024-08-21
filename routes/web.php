@@ -23,9 +23,13 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('/store-registration', function () {
-    return view('store-registration');
-})->name('store-registration');
+Route::get('/store-register', function () {
+    return view('store-register');
+})->name('store-register');
+
+Route::get('/user-register', function () {
+    return view('user-register');
+})->name('user-register');
 
 
 Route::middleware('auth')->group(function () {
