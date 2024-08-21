@@ -40,6 +40,10 @@ Route::get('/user-register', function () {
     return view('user-register');
 })->name('user-register');
 
+Route::get('/a', function () {
+    return view('quest_board');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

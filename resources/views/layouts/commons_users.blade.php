@@ -41,7 +41,7 @@
             </div>
         </div>
     </x-slot>
-
+    @yield('content')
     <script>
         // 左側のテキスト要素のみを取得
         const leftTexts = document.querySelectorAll('.left');
