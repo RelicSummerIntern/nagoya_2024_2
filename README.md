@@ -38,7 +38,7 @@ docker-compose exec laravel.test npm run dev
 docker-compose stop
 ```
 
-## URL
+## URL(編集済み)
 サンプルアプリ：http://localhost/
 
 phpMyAdmin: http://localhost:8080/
