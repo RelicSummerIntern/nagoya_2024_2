@@ -40,8 +40,6 @@ Route::get('/user-register', function () {
     return view('user-register');
 })->name('user-register');
 
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -55,6 +53,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
 
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
+
+    // 店用
+    Route::get('/store-input', function () {
+        return view('store-input');
+    })->name('store-input');
 });
 
 require __DIR__.'/auth.php';
