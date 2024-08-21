@@ -23,6 +23,10 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+Route::get('/store-registration', function () {
+    return view('store-registration');
+})->name('store-registration');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
