@@ -15,7 +15,6 @@ return new class extends Migration
             $table->integer('birth_year')->after('password')->nullable();
             $table->integer('birth_month')->after('birth_year')->nullable();
             $table->integer('birth_day')->after('birth_month')->nullable();
-            $table->bigInteger('quest_id')->after('birth_day');
         });
     }
 
