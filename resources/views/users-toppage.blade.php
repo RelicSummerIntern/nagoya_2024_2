@@ -22,7 +22,7 @@
 </style>
 <main>
     <div class="recent_open">
-        〜最新のオープン情報〜
+        〜オープン〜
     </div>
 </main>
 @endsection
