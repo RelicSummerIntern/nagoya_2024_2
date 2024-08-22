@@ -10,7 +10,7 @@ class QuestController extends Controller
 {
     public function index()
     {
-        $quest = Quest::all();
-        return view('quest_board', ['quest' => $quest]);
+        $quests = Quest::all();
+        return view('quest_board', ['quests' => $quests]);
     }
 }
