@@ -3,9 +3,9 @@
         <div class="flex items-center justify-between">
             <!-- 左側のテキスト群 -->
             <div class="flex space-x-12">
-                <a href="/home" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('home*') ? 'text-black-800' : 'text-gray-400' }}"
-                    style="text-decoration: none; color: {{ request()->is('home*') ? '#000000' : '#a1a1aa' }};">
+                <a href="/users-top" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('users-top*') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('users-top*') ? '#000000' : '#a1a1aa' }};">
                     トップページ
                 </a>
 
