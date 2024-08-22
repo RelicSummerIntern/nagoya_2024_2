@@ -24,7 +24,7 @@
         }
         a {
             text-align: center
-            color: gray
+            color: gray;
         }
         h1 {
             color: #333;
