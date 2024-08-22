@@ -60,6 +60,10 @@ Route::get('/quest_board/quest_user3', function (){
     return view('quest_user3');
 })->name('quest_user3');
 
+Route::get("/users-top", function(){
+    return view("users-toppage");
+})->name("users-top");
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
