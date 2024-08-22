@@ -29,32 +29,39 @@
         text-align: left;
     }
     
-    .text_box {
-        margin-top: 15px; /* テキストボックスとの間隔を広げる */
-        height: 70px; /* テキストボックスの縦の高さを大きくする */
-        font-size: 30px; /* テキストボックス内の文字サイズを調整 */
-        padding: 10px; /* テキストボックス内の余白を調整 */
-        border-radius: 5px; /* テキストボックスの角を丸くする */
-        border: 1px solid #ccc; /* テキストボックスの枠線 */
-        width: 100%; /* テキストボックスを親要素の幅いっぱいにする */
+    .centertext {
+        
+        font-size: 60px; /* テキストボックス内の文字サイズを調整 */
+        
         text-align: center;
     }
 
-    .send {
-        margin-top: 20px;
-        padding: 10px 30px;
-        background-color: #4a90e2;
-        color: white;
+    .authentication{
+        margin-top: 10px;
+    }
+
+    .code{
+        font-size: 60px;
+    }
+
+    .refresh {
+        width: 90px; /* 幅を設定 */
+        height: 50px; /* 高さを設定 */
+        background-color: #ccc; /* 背景色 */
+        color: black;
         font-size: 18px;
         font-weight: bold;
         border: none;
-        border-radius: 5px;
-        cursor: pointer;
+        border-radius: 50%; /* 丸くするために50%のborder-radiusを設定 */
         transition: background-color 0.3s;
+        text-align: center;
+        line-height: 60px; /* ボタン内のテキストを中央に配置するためにline-heightを設定 */
+        text-decoration: none;
+        border-radius: 20px;
     }
 
-    .send:hover {
-        background-color: #357ab7;
+    .refresh:hover {
+        background-color: #999;
     }
 
     .return {
@@ -67,6 +74,8 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s;
+        text-decoration: none;
+
     }
 
     .return:hover {
@@ -79,13 +88,19 @@
                 <span class="large_text">あいことば</span>
                 を入力
             </p>
-            <p class="textbox">
-                <input type="text" id="code" name="code" class="text_box" placeholder="あいことば" required>
+            <p class="centertext">
+                入力完了
             </p>
-            <button class="send">
-                送信
+            <div class="authentication">
+                <p>認証コード</p>
+                <p class="code">000</p>
+            </div>
+            <button class="refresh">
+                更新
             </button>
         </div>
+
+        
 
         <a href="{{ route('Quest.index') }}" class="return">
             クエストボードに戻る
