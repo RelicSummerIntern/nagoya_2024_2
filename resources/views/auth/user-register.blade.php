@@ -27,13 +27,13 @@
                     </div>
                 </div>
 
-                    <form id="registerForm" method="POST" action="{{ route('register') }}">
+                    <form id="registerForm" method="POST" action="{{ route('user-register') }}">
                         @csrf
                         
                         <div class="grid grid-cols-1 gap-6">
                             <div class="col-span-1">
-                                <label for="username" class="block text-sm font-medium text-gray-700">ユーザーネーム <span class="text-red-500">*</span></label>
-                                <input id="username" name="username" type="text" required class="mt-1 block w-full">
+                                <label for="name" class="block text-sm font-medium text-gray-700">ユーザーネーム <span class="text-red-500">*</span></label>
+                                <input id="name" name="name" type="text" required class="mt-1 block w-full">
                             </div>
 
                             <div class="col-span-1">

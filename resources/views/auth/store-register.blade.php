@@ -27,19 +27,19 @@
                     </div>
                 </div>
 
-                    <form id="registerForm" method="POST" action="{{ route('register') }}">
+                    <form id="registerForm" method="POST" action="{{ route('store-register') }}">
                         @csrf
                         
                         <div class="grid grid-cols-1 gap-6">
                             <div class="col-span-1">
                                 <label for="store_name" class="block text-sm font-medium text-gray-700">店名 <span class="text-red-500">*</span></label>
-                                <input id="store_name" name="store_name" type="text" required class="mt-1 block w-full">
+                                <input id="name" name="name" type="text" required class="mt-1 block w-full">
                             </div>
 
-                            <div class="col-span-1">
+                            <!-- <div class="col-span-1">
                                 <label for="zipcode" class="block text-sm font-medium text-gray-700">郵便番号（ハイフンなし） <span class="text-red-500">*</span></label>
                                 <div class="flex mt-1">
-                                    <input id="zipcode" name="zipcode" type="text" placeholder="〒" required class="block w-1/4 mr-2" oninput="convertToHalfWidth(this);">
+                                    <input id="postal_code" name="postal_code" type="text" placeholder="〒" required class="block w-1/4 mr-2" oninput="convertToHalfWidth(this);">
                                     <button type="button" class="bg-gray-100 border rounded px-2 py-1" onclick="searchAddress()">番号から検索</button>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                             <div class="col-span-1">
                                 <label for="phone_number" class="block text-sm font-medium text-gray-700">電話番号（ハイフンなし） <span class="text-red-500">*</span></label>
                                 <input id="phone_number" name="phone_number" type="text" required class="mt-1 block w-full" oninput="convertToHalfWidth(this);">
-                            </div>
+                            </div> -->
 
                             <div class="col-span-1">
                                 <label for="email" class="block text-sm font-medium text-gray-700">メールアドレス <span class="text-red-500">*</span></label>
@@ -97,7 +97,7 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
     function convertToHalfWidth(input) {
         input.value = input.value.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (s) {
             return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
@@ -163,5 +163,5 @@
             event.preventDefault(); // フォームの送信を防ぐ
         }
     });
-    </script>
+    </script> -->
 </x-guest-layout>
