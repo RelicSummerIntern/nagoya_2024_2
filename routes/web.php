@@ -68,6 +68,10 @@ Route::get("/users-top", function(){
     return view("users-toppage");
 })->name("users-top");
 
+Route::get('/recommend', function () {
+    return view('recommend');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
