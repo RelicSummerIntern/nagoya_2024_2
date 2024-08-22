@@ -78,7 +78,8 @@ Route::middleware('auth')->group(function () {
     // Route::get('/store-input', function () {
     //     return view('store-input');
     // })->name('store-input');
-    Route::post('/stores/create', [StoreController::class, 'create'])->name('stores.create');
+    Route::get('/stores/create', [StoreController::class, 'create'])->name('stores.create');
+    Route::post('/stores/create', [StoreController::class, 'store'])->name('stores.store');
 });
 
 require __DIR__.'/auth.php';
