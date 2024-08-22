@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestController;
+use App\Http\Controllers\StoreController;
 
 
 /*
@@ -44,9 +45,7 @@ Route::get('/user-register', function () {
 
 Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
 
-Route::get('/storesmypage', function () {
-    return view('storesmypage');
-})->name('storesmypage');
+Route::get('/storesmypage', [StoreController::class, 'index'])->name('Store.index');
 
 Route::get('/users-storespage', function () {
     return view('users-storespage');
