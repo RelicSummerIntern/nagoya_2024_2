@@ -31,7 +31,7 @@ class StoreAuthenticatedSessionController extends Controller
 
             session()->flash('success', 'ログインしました!');
 
-            return redirect()->intended(RouteServiceProvider::HOME);
+            return redirect()->route('mypage');
         }
 
         return back()->withErrors([
@@ -52,6 +52,6 @@ class StoreAuthenticatedSessionController extends Controller
 
         session()->flash('success', 'ログアウトしました!');
 
-        return redirect('/');
+        return redirect('');
     }
 }
