@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('quests', function (Blueprint $table) {
             $table->id();
-            $table->boolean('is_completed');
+            $table->boolean('is_completed')->default(false);
             $table->bigInteger('store_id')->unsigned();
             $table->foreign('store_id')->references('id')->on('stores');
             $table->bigInteger('user_id')->unsigned();
