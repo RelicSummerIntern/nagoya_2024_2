@@ -85,7 +85,7 @@
                     
                     <!-- 実際はimg -->
                     <a href="/quest_board/quest_user1" style="margin-top: 20px;">
-                        <img src="{{ asset('images/quest_logo1.png') }}" width="100" height="100">
+                        <img src="{{ asset('images/quest_logo1.png') }}" width="100%" height="auto">
                     </a>
                 </div>
             </div>
