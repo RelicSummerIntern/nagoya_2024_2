@@ -75,7 +75,9 @@
                 </div>
                 
                 <!-- 実際はimg -->
-                <div class="black">画像を貼る</div>
+                <a href="/quest_board/quest_user1" style="margin-top: 20px;">
+                    <img src="{{ asset('images/quest_logo1.png') }}" width="100" height="100">
+                </a>
             </div>
                
 
