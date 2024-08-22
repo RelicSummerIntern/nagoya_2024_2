@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class Store extends Authenticatable
+class StoreUser extends Authenticatable
 {
     use HasFactory;
 
@@ -16,11 +16,5 @@ class Store extends Authenticatable
         'password',
     ];
 
-    protected $table = 'stores';
-    
-
-    public function quests()
-    {
-        return $this->hasMany(Quest::class);
-    }
+    protected $table = 'store_users';
 }

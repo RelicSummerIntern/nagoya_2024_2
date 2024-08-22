@@ -11,6 +11,6 @@ class QuestController extends Controller
     public function index()
     {
         $quest = Quest::all();
-        return view('quest_board', ['quest => $quest']);
+        return view('quest_board', ['quest' => $quest]);
     }
 }

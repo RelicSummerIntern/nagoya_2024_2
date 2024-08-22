@@ -35,19 +35,10 @@ Route::get("/template/stores", function (){
     return view('layouts.commons_stores');
 });
 
-Route::get('/store-register', function () {
-    return view('store-register');
-})->name('store-register');
-
-Route::get('/user-register', function () {
-    return view('user-register');
-})->name('user-register');
 
 Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
 
-Route::get('/storesmypage', function () {
-    return view('storesmypage');
-})->name('storesmypage');
+Route::get('/storesmypage/{id}', [StoreController::class, 'index'])->name('Store.index');
 
 Route::get('/users-storespage', function () {
     return view('users-storespage');
@@ -56,6 +47,18 @@ Route::get('/users-storespage', function () {
 Route::get('/mypage', function () {
     return view('mypage');
 })->name('mypage');
+
+Route::get('/quest_board/quest_user1', function (){
+    return view('quest_user1');
+})->name('quest_user1');
+
+Route::get('/quest_board/quest_user2', function (){
+    return view('quest_user2');
+})->name('quest_user2');
+
+Route::get('/quest_board/quest_user3', function (){
+    return view('quest_user3');
+})->name('quest_user3');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

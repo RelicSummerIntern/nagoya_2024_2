@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
-class RegisteredUserController extends Controller
+class StoreRegisteredUserController extends Controller
 {
     /**
      * Display the registration view.
@@ -45,6 +45,16 @@ class RegisteredUserController extends Controller
         event(new Registered($storeUser));
 
         Auth::guard('store_user')->login($storeUser);
+
+        // $Store = Store::create([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'password' => Hash::make($request->password),
+        // ]);
+
+        // event(new Registered($Store));
+
+        // Auth::guard('store')->login($Store);
 
         session()->flash('success', '会員登録に成功しました。');
 
