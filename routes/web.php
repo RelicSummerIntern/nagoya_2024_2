@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestController;
+use App\Http\Controllers\StoreController;
 
 
 /*
@@ -71,9 +72,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 
     // 店用
-    Route::get('/store-input', function () {
-        return view('store-input');
-    })->name('store-input');
+    // Route::get('/store-input', function () {
+    //     return view('store-input');
+    // })->name('store-input');
+    Route::post('/stores/create', [StoreController::class, 'create'])->name('stores.create');
 });
 
 require __DIR__.'/auth.php';
