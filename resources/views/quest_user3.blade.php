@@ -29,33 +29,35 @@
         text-align: left;
     }
     
-    .text_box {
-        margin-top: 15px; /* テキストボックスとの間隔を広げる */
-        height: 70px; /* テキストボックスの縦の高さを大きくする */
-        font-size: 30px; /* テキストボックス内の文字サイズを調整 */
-        padding: 10px; /* テキストボックス内の余白を調整 */
-        border-radius: 5px; /* テキストボックスの角を丸くする */
-        border: 1px solid #ccc; /* テキストボックスの枠線 */
-        width: 100%; /* テキストボックスを親要素の幅いっぱいにする */
-        text-align: center;
+    .centertext {
+        margin-top: 40px;
+        font-size: 20px; /* テキストボックス内の文字サイズを調整 */
+        display: flex;
+        justify-content: space-between;
+        
     }
 
-    .send {
+    .lefttext{
+        text-align: left;
+        margin-left: 200px;
+    }
+
+    .righttext{
+        text-align: right;
+        margin-right: 250px;
+    }
+
+    .black-box {
         margin-top: 20px;
-        padding: 10px 30px;
-        background-color: #4a90e2;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        background-color: black; /* 背景色を黒に設定 */
+        color: white; /* 文字色を白に設定 */
+        padding: 20px; /* 四角形内のパディングを設定 */
+        display: inline-block; /* 四角形が内容に応じてサイズを調整するように設定 */
+        font-size: 60px;
     }
+    
 
-    .send:hover {
-        background-color: #357ab7;
-    }
+    
 
     .return {
         padding: 10px 20px;
@@ -78,16 +80,18 @@
     <main>
         <div class="quest">
             <p class="main_text">
-                <span class="large_text">あいことば</span>
-                を入力
+                <span class="large_text">クエストクリア！</span>
+                
             </p>
-            <p class="textbox">
-                <input type="text" id="code" name="code" class="text_box" placeholder="あいことば" required>
-            </p>
-            <button class="send">
-                送信
-            </button>
+            <div class="centertext">
+                <span class="lefttext">クーポン獲得まで</span>
+                <span class="righttext"><span class="font-extrabold text-20px text-red-600 leading-tight">5</span>/7</span>
+            </div>
+            
+            <div class="black-box">クーポンGET！</div>
         </div>
+
+        
 
         <a href="{{ route('Quest.index') }}" class="return">
             クエストボードに戻る
