@@ -30,12 +30,8 @@
                 text-align: left;
             }
             a {
-                color: #EEE;
-                font-size: 20px;
-                background-color: #000;
-                border: solid 5px black;
-                border-radius: 100px;
-                display: inline-block;
+                text-align: center;
+                color: gray;
             }
         </style>
 </head>
