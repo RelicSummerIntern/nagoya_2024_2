@@ -30,7 +30,7 @@
             font-size: 16px;
         }
         input[type="submit"] {
-            background-color: #4CAF50;
+            background-color: #367ab7;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -39,7 +39,7 @@
             font-size: 16px;
         }
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #367ab7;
         }
     </style>
 </head>
