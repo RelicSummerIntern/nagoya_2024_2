@@ -60,6 +60,10 @@ Route::get('/quest_board/quest_user3', function (){
     return view('quest_user3');
 })->name('quest_user3');
 
+Route::get('/quest-summary/authenticate', function (){
+    return view('stores_number_form');
+})->name('stores_number_form');
+
 Route::get("/users-top", function(){
     return view("users-toppage");
 })->name("users-top");
