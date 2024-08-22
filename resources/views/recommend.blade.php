@@ -33,6 +33,19 @@
                 text-align: center;
                 color: gray;
             }
+            .return {
+                padding: 10px 20px;
+                background-color: #ccc;
+                color: black;
+                font-size: 18px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                text-decoration: none;
+
+            }
         </style>
 </head>
 <body>
@@ -50,7 +63,9 @@
             </ol>
         </div>
     </div>
-    <a href="/quest_board">クエストボードに移動</a>
+    <a href="{{ route('Quest.index') }}" class="return">
+            クエストボードに移動
+    </a>
 </body>
 
 @endsection
