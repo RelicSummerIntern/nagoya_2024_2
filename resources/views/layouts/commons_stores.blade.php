@@ -9,15 +9,15 @@
                     トップページ
                 </a>
 
-                <a href="{{ url('/quest-summary') }}" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('quest-summary') ? 'text-black' : 'text-gray-400' }}" 
-                    style="text-decoration: none; color: {{ request()->is('quest-summary') ? '#000000' : '#a1a1aa' }};">
+                <a href="{{ url('/quest-summary*') }}" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('quest-summary*') ? 'text-black' : 'text-gray-400' }}" 
+                    style="text-decoration: none; color: {{ request()->is('quest-summary*') ? '#000000' : '#a1a1aa' }};">
                     クエスト集計
                 </a>
 
-                <a href="{{ url('/survey-summary') }}" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('survey-summary') ? 'text-black' : 'text-gray-400' }}" 
-                    style="text-decoration: none; color: {{ request()->is('survey-summary') ? '#000000' : '#a1a1aa' }};">
+                <a href="{{ url('/survey-summary*') }}" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('survey-summary*') ? 'text-black' : 'text-gray-400' }}" 
+                    style="text-decoration: none; color: {{ request()->is('survey-summary*') ? '#000000' : '#a1a1aa' }};">
                     アンケート集計
                 </a>
             </div>
