@@ -22,8 +22,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center
         }
-        .border {
-            
+        a {
+            text-align: center
         }
         h1 {
             color: #333;
@@ -64,7 +64,7 @@
         <h4>クーポン獲得まで 7/7</h4>
         <div style="border: 1px solid; background-color: #00ffff;"><h3>クーポンゲット！<h3></div>
     </div>
-    
+    <a href="/home">トップページに戻る</a>
 </body>
 
 @endsection
