@@ -50,9 +50,7 @@ Route::get('/mypage', function () {
     return view('mypage');
 })->name('mypage');
 
-Route::get('/quest_board/quest_user1', function (){
-    return view('quest_user1');
-})->name('quest_user1');
+Route::get('/quest_board/quest_user1', [QuestController::class, 'coupon'])->name('Quest.coupon');
 
 Route::get('/quest_board/quest_user2', function (){
     return view('quest_user2');

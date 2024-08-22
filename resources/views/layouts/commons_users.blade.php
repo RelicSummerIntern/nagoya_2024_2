@@ -39,7 +39,7 @@
                 <!-- 右揃えテキスト2 -->
                 <div class="flex items-center">
                     <h4 class="font-extrabold text-4xl text-red-600 leading-tight">
-                        4
+                    {{ $clearCounts[$quest->id] }}
                     </h4>
                     <h4 class="font-extrabold text-4xl text-black-800 leading-tight">
                         /7

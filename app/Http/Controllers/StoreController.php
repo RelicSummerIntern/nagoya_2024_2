@@ -75,4 +75,10 @@ class StoreController extends Controller
         $store = Store::find($id);
         return view('users-storespage', ['store' => $store]);
     }
+
+    public function coupon()
+    {
+        
+        return view('quest_user1');
+    }
 }

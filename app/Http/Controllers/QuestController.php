@@ -17,5 +17,10 @@ class QuestController extends Controller
         });
         return view('quest_board', ['quests' => $quests, 'clearCounts' => $clearCounts]);
     }
-    
+    public function coupon()
+    {
+        $quest = Quest::inRandomOrder()->limit(10)->get();
+        
+        return view('quest_user1', ['quest' => $quest]);
+    }
 }
