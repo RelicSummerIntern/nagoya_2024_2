@@ -4,26 +4,26 @@
             <!-- 左側のテキスト群 -->
             <div class="flex space-x-12">
                 <a href="/home" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('home') ? 'text-black-800' : 'text-gray-400' }}"
-                    style="text-decoration: none; color: {{ request()->is('home') ? '#000000' : '#a1a1aa' }};">
+                    {{ request()->is('home*') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('home*') ? '#000000' : '#a1a1aa' }};">
                     トップページ
                 </a>
 
                 <a href="/recommend" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('recommend') ? 'text-black-800' : 'text-gray-400' }}"
-                    style="text-decoration: none; color: {{ request()->is('recommend') ? '#000000' : '#a1a1aa' }};">
+                    {{ request()->is('recommend*') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('recommend*') ? '#000000' : '#a1a1aa' }};">
                     今日のおすすめ
                 </a>
 
-                <a href="/a" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('a') ? 'text-black-800' : 'text-gray-400' }}"
-                    style="text-decoration: none; color: {{ request()->is('a') ? '#000000' : '#a1a1aa' }};">
+                <a href="/quest_board" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('quest_board*') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('quest_board*') ? '#000000' : '#a1a1aa' }};">
                     クエストボード
                 </a>
 
                 <a href="/search" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('search') ? 'text-black-800' : 'text-gray-400' }}"
-                    style="text-decoration: none; color: {{ request()->is('search') ? '#000000' : '#a1a1aa' }};">
+                    {{ request()->is('search*') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('searc*') ? '#000000' : '#a1a1aa' }};">
                     店を探す
                 </a>
             </div>
