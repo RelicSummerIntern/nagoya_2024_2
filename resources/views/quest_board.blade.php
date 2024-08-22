@@ -51,6 +51,7 @@
     }
     .store_explanation{
         margin-top:20px; 
+        margin-right: 100px;
         text-align:left;
     }
 
@@ -62,22 +63,23 @@
     
 </style>
     <main>
+    @foreach($quests as $quest)
         <div class="quest_board">
             <div class="quest_board_h">
-                <h2 class="store_name">店の名前</h2>
-                <p class="store_open_day">オープン日 ~~年 ~~月 ~~日</p>
+                <h2 class="store_name">{{ $quest->store->name }}</h2>
+                <p class="store_open_day">{{ $quest->store->opening_year }} 年 {{ $quest->store->opening_month }} 月 {{$quest->store->opening_day }} 日</p>
             </div>
 
             <div class="quest_board_b">
                 <div>
-                    <p class="store_explanation">説明・コメント</p>
-                    <p class="store_address">所在地など</p>
+                    <p class="store_explanation">{{ $quest->store->discription }}</p>
+                    <p class="store_address">{{ $quest->store->postal_code }}  {{ $quest->store->address }}  {{ $quest->store->building_name }}</p>
                 </div>
                 
                 <!-- 実際はimg -->
                 <div class="black">画像を貼る</div>
             </div>
-               
+    @endforeach
 
             
 
