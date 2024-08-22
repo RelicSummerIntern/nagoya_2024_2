@@ -60,6 +60,10 @@ Route::get('/quest_board/quest_user3', function (){
     return view('quest_user3');
 })->name('quest_user3');
 
+Route::get('/quest-summary/authenticate', function (){
+    return view('stores_number_form');
+})->name('stores_number_form');
+
 Route::get("/users-top", function(){
     return view("users-toppage");
 })->name("users-top");
@@ -79,9 +83,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 
     // 店用
-    Route::get('/store-input', function () {
-        return view('store-input');
-    })->name('store-input');
+    // Route::get('/store-input', function () {
+    //     return view('store-input');
+    // })->name('store-input');
+    Route::get('/stores/create', [StoreController::class, 'create'])->name('stores.create');
+    Route::post('/stores/create', [StoreController::class, 'store'])->name('stores.store');
 });
 
 require __DIR__.'/auth.php';

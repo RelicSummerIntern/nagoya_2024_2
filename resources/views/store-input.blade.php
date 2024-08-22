@@ -14,24 +14,24 @@
                         
                         <div class="grid grid-cols-1 gap-6">
                             <div class="col-span-1">
-                                <label for="store_image" class="block text-sm font-medium text-gray-700">店舗画像</label>
-                                <input id="store_image" name="store_image" type="file" accept="image/*" class="mt-1 block w-full">
+                                <label for="image_url" class="block text-sm font-medium text-gray-700">店舗画像</label>
+                                <input id="image_url" name="image_url" type="file" accept="image/*" class="mt-1 block w-full">
                             </div>
 
                             <div class="col-span-1">
-                                <label for="store_name" class="block text-sm font-medium text-gray-700">店名 <span class="text-red-500">*</span></label>
-                                <input id="store_name" name="store_name" type="text" required class="mt-1 block w-full">
+                                <label for="name" class="block text-sm font-medium text-gray-700">店名 <span class="text-red-500">*</span></label>
+                                <input id="name" name="name" type="text" required class="mt-1 block w-full">
                             </div>
 
-                            <div class="col-span-1">
+                            <!-- <div class="col-span-1">
                                 <label for="store_detail" class="block text-sm font-medium text-gray-700">説明 <span class="text-red-500">*</span></label>
                                 <textarea id="store_detail" name="store_detail" required class="mt-1 block w-full" rows="6"></textarea>
-                            </div>
+                            </div> -->
 
                             <div class="col-span-1">
-                                <label for="zipcode" class="block text-sm font-medium text-gray-700">郵便番号（ハイフンなし） <span class="text-red-500">*</span></label>
+                                <label for="postal_code" class="block text-sm font-medium text-gray-700">郵便番号（ハイフンなし） <span class="text-red-500">*</span></label>
                                 <div class="flex mt-1">
-                                    <input id="zipcode" name="zipcode" type="text" placeholder="〒" required class="block w-1/4 mr-2" oninput="convertToHalfWidth(this);">
+                                    <input id="postal_code" name="postal_code" type="text" placeholder="〒" required class="block w-1/4 mr-2" oninput="convertToHalfWidth(this);">
                                     <button type="button" class="bg-gray-100 border rounded px-2 py-1" onclick="searchAddress()">番号から検索</button>
                                 </div>
                             </div>
@@ -47,8 +47,8 @@
                             </div>
 
                             <div class="col-span-1">
-                                <label for="building" class="block text-sm font-medium text-gray-700">建物名等</label>
-                                <input id="building" name="building" type="text" class="mt-1 block w-full">
+                                <label for="building_name" class="block text-sm font-medium text-gray-700">建物名等</label>
+                                <input id="building_name" name="building_name" type="text" class="mt-1 block w-full">
                             </div>
 
                             <div class="col-span-1">
@@ -81,14 +81,14 @@
     }
 
     function searchAddress() {
-        const zipcode = document.getElementById('zipcode').value;
-        if (!zipcode) {
+        const postal_code = document.getElementById('postal_code').value;
+        if (!postal_code) {
             alert('郵便番号を入力してください。');
             return;
         }
 
         // API URL (郵便番号APIのエンドポイント)
-        const apiUrl = `https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipcode}`;
+        const apiUrl = `https://zipcloud.ibsnet.co.jp/api/search?zipcode=${postal_code}`;
 
         fetch(apiUrl)
             .then(response => response.json())
@@ -117,7 +117,7 @@
         const passwordConfirmation = document.getElementById('password_confirmation').value;
 
         // 必須項目がすべて入力されているかをチェック
-        const requiredFields = ['store_name', 'zipcode', 'prefecture', 'address', 'phone_number', 'email'];
+        const requiredFields = ['name', 'postal_code', 'prefecture', 'address', 'phone_number', 'email'];
         let allFieldsFilled = true;
 
         for (const field of requiredFields) {
@@ -135,7 +135,7 @@
         }
 
         // 画像ファイルが選択されているかをチェック
-        const imageInput = document.getElementById('store_image');
+        const imageInput = document.getElementById('image_url');
         if (imageInput && imageInput.files.length === 0) {
             alert('店舗画像を選択してください。');
             event.preventDefault(); // フォームの送信を防ぐ

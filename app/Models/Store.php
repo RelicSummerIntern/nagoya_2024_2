@@ -12,9 +12,20 @@ class Store extends Authenticatable
 
     protected $fillable = [
         'name',
+        'genre_id',
+        'opening_year',
+        'opening_month',
+        'opening_day',
+        'postal_code',
+        'prefecture',
+        'address',
+        'building_name',
+        'phone_number',
         'email',
-        'password',
+        'image_url',
+        'discription',
     ];
+    
 
     protected $table = 'stores';
     
