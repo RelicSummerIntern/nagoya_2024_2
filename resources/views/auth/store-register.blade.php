@@ -97,71 +97,71 @@
         </div>
     </div>
 
-    <!-- <script>
+    <script>
     function convertToHalfWidth(input) {
         input.value = input.value.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (s) {
             return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
         });
     }
 
-    function searchAddress() {
-        const zipcode = document.getElementById('zipcode').value;
-        if (!zipcode) {
-            alert('郵便番号を入力してください。');
-            return;
-        }
+    // function searchAddress() {
+    //     const zipcode = document.getElementById('zipcode').value;
+    //     if (!zipcode) {
+    //         alert('郵便番号を入力してください。');
+    //         return;
+    //     }
 
-        // API URL (郵便番号APIのエンドポイント)
-        const apiUrl = `https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipcode}`;
+    //     // API URL (郵便番号APIのエンドポイント)
+    //     const apiUrl = `https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipcode}`;
 
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                if (data.results) {
-                    const result = data.results[0];
-                    const prefecture = result.address1; // 都道府県
-                    const city = result.address2; // 市区町村
-                    const town = result.address3; // 町名など
+    //     fetch(apiUrl)
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             if (data.results) {
+    //                 const result = data.results[0];
+    //                 const prefecture = result.address1; // 都道府県
+    //                 const city = result.address2; // 市区町村
+    //                 const town = result.address3; // 町名など
 
-                    // フィールドに値を設定
-                    document.getElementById('prefecture').value = prefecture;
-                    document.getElementById('address').value = city + town;
-                } else {
-                    alert('住所が見つかりませんでした。');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('エラーが発生しました。');
-            });
-    }
+    //                 // フィールドに値を設定
+    //                 document.getElementById('prefecture').value = prefecture;
+    //                 document.getElementById('address').value = city + town;
+    //             } else {
+    //                 alert('住所が見つかりませんでした。');
+    //             }
+    //         })
+    //         .catch(error => {
+    //             console.error('Error:', error);
+    //             alert('エラーが発生しました。');
+    //         });
+    // }
 
-    document.getElementById('registerForm').addEventListener('submit', function(event) {
-        const password = document.getElementById('password').value;
-        const passwordConfirmation = document.getElementById('password_confirmation').value;
+    // document.getElementById('registerForm').addEventListener('submit', function(event) {
+    //     const password = document.getElementById('password').value;
+    //     const passwordConfirmation = document.getElementById('password_confirmation').value;
 
-        // 必須項目がすべて入力されているかをチェック
-        const requiredFields = ['store_name', 'zipcode', 'prefecture', 'address', 'phone_number', 'email', 'password', 'password_confirmation'];
-        let allFieldsFilled = true;
+    //     // 必須項目がすべて入力されているかをチェック
+    //     const requiredFields = ['store_name', 'zipcode', 'prefecture', 'address', 'phone_number', 'email', 'password', 'password_confirmation'];
+    //     let allFieldsFilled = true;
 
-        for (const field of requiredFields) {
-            const input = document.getElementById(field);
-            if (input && !input.value.trim()) {
-                allFieldsFilled = false;
-                break;
-            }
-        }
+    //     for (const field of requiredFields) {
+    //         const input = document.getElementById(field);
+    //         if (input && !input.value.trim()) {
+    //             allFieldsFilled = false;
+    //             break;
+    //         }
+    //     }
 
-        if (!allFieldsFilled) {
-            alert('必須項目が未入力です。');
-            event.preventDefault(); // フォームの送信を防ぐ
-            return;
-        }
+    //     if (!allFieldsFilled) {
+    //         alert('必須項目が未入力です。');
+    //         event.preventDefault(); // フォームの送信を防ぐ
+    //         return;
+    //     }
 
-        if (password !== passwordConfirmation) {
-            alert('パスワードが一致しません。');
-            event.preventDefault(); // フォームの送信を防ぐ
-        }
-    });
-    </script> -->
+    //     if (password !== passwordConfirmation) {
+    //         alert('パスワードが一致しません。');
+    //         event.preventDefault(); // フォームの送信を防ぐ
+    //     }
+    // });
+    </script>
 </x-guest-layout>
