@@ -64,7 +64,7 @@
 
     <!-- "新規登録はこちら" ボタンをページ下部に配置 -->
     <div class="flex justify-center mt-8">
-        <a href="{{ route('user-register') }}" class="bg-gray-300 text-gray-800 px-6 py-3 rounded w-full max-w-md font-bold text-lg text-center">
+        <a href="{{ route('store-register') }}" class="bg-gray-300 text-gray-800 px-6 py-3 rounded w-full max-w-md font-bold text-lg text-center">
             新規登録はこちら
         </a>
     </div>
