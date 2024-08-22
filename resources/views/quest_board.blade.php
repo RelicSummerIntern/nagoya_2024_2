@@ -81,10 +81,11 @@
                     <img src="{{ asset('images/quest_logo1.png') }}" width="100" height="100">
                 </a>
             </div>
+        </div>
     @endforeach
 
             
 
-        </div>
+        
     </main>
 @endsection
