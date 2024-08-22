@@ -59,7 +59,7 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     
 
-                    <x-nav-link :href="route('storesmypage')" :active="request()->routeIs('storesmypage')" class="box-link">
+                    <x-nav-link :href="route('Store.index')" :active="request()->routeIs('Store.index')" class="box-link">
                         {{ __('マイページ') }}
                     </x-nav-link>
                 </div>

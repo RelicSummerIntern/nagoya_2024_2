@@ -85,11 +85,11 @@
                 <img src="images/sample.jpg" alt="店舗画像">
             </div>
             <div class="shop-info">
-                <h1>よよい軒</h1>
-                <p>オープン日: 2024 年 8 月 19 日</p>
+                <h1>{{ $store->name }}</h1>
+                <p>オープン日: {{ $store->opening_year }} 年 {{ $store->opening_month }} 月 {{ $store->opening_day }} 日</p>
             </div>
             <div class="description">
-                <p>説明：ここに店舗の説明文が入ります。お店の特徴や提供するサービスについて詳しく書かれています。</p>
+                <p></p>
             </div>
                 <div class="contact-info">
                     <p>住所: T450-0002 愛知県名古屋市中村区名駅4丁目7-1</p>
