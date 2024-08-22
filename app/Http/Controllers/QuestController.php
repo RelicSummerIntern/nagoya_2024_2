@@ -10,7 +10,7 @@ class QuestController extends Controller
 {
     public function index()
     {
-        $quests = Quest::all();
+        $quests = Quest::inRandomOrder()->limit(10)->get();
         return view('quest_board', ['quests' => $quests]);
     }
 }
