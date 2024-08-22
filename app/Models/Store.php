@@ -34,4 +34,19 @@ class Store extends Authenticatable
     {
         return $this->hasMany(Quest::class);
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Storeが作成されたときに自動的にQuestを作成する
+        static::created(function ($store) {
+            // ここでQuestを作成し、store_idを設定
+            $store->quests()->create([
+                // 必要に応じて他のデータも設定
+                'user_id' => auth()->id(), // 例: 現在のユーザーIDを設定
+                'is_completed' => false, // 例: デフォルト値
+            ]);
+        });
+    }
 }

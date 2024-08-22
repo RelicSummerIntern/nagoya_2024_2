@@ -36,9 +36,11 @@ Route::get("/template/stores", function (){
 });
 
 
-Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
 
-Route::get('/storesmypage/{id}', [StoreController::class, 'index'])->name('Store.index');
+
+    Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
+    Route::get('/storesmypage/{id}', [StoreController::class, 'index'])->name('Store.index');
+    Route::get('/users-storespage/{id}', [StoreController::class, 'show'])->name('Store.show');
 
 Route::get('/users-storespage', function () {
     return view('users-storespage');
@@ -83,11 +85,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 
     // 店用
+
+    Route::get('/store-input', function () {
+        return view('store-input');
+    })->name('store-input');
+
+    
+
     // Route::get('/store-input', function () {
     //     return view('store-input');
     // })->name('store-input');
     Route::get('/stores/create', [StoreController::class, 'create'])->name('stores.create');
     Route::post('/stores/create', [StoreController::class, 'store'])->name('stores.store');
+
 });
 
 require __DIR__.'/auth.php';
