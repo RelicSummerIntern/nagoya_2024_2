@@ -38,7 +38,7 @@ Route::get("/template/stores", function (){
 
 Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
 
-Route::get('/storesmypage', [StoreController::class, 'index'])->name('Store.index');
+Route::get('/storesmypage/{id}', [StoreController::class, 'index'])->name('Store.index');
 
 Route::get('/users-storespage', function () {
     return view('users-storespage');

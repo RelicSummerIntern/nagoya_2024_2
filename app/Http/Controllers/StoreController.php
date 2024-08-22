@@ -7,9 +7,9 @@ use App\Models\Store;
 
 class StoreController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $store = Store::all();
+        $store = Store::find($id);
         return view('storesmypage', ['store' => $store]);
     }
 }
