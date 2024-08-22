@@ -24,6 +24,7 @@
         }
         a {
             text-align: center
+            color: gray
         }
         h1 {
             color: #333;
@@ -64,7 +65,7 @@
         <h4>クーポン獲得まで 7/7</h4>
         <div style="border: 1px solid; background-color: #00ffff;"><h3>クーポンゲット！<h3></div>
     </div>
-    <a href="/home">トップページに戻る</a>
+    <a href="/quest_board">クエストボードに戻る</a>
 </body>
 
 @endsection
