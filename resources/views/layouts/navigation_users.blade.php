@@ -66,7 +66,7 @@
                     </x-nav-link>
 =======
                 <x-nav-link :href="route('mypage')" :active="request()->routeIs('mypage')" 
-                    class="box-link custom-no-underline {{ request()->routeIs('mypage') ? 'text-black font-extrabold' : '' }}" 
+                    class="box-link custom-no-underline {{ request()->routeIs('mypage') ? 'text-black font-bold' : '' }}" 
                     style="text-decoration: none !important;">
                     {{ __('マイページ') }}
                 </x-nav-link>
