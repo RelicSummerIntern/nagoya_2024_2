@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuestController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +42,7 @@ Route::get('/user-register', function () {
     return view('user-register');
 })->name('user-register');
 
-Route::get('/a', function () {
-    return view('quest_board');
-});
+Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
 
 Route::get('/storesmypage', function () {
     return view('storesmypage');
