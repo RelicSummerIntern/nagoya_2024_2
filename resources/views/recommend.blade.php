@@ -44,7 +44,7 @@
                 cursor: pointer;
                 transition: background-color 0.3s;
                 text-decoration: none;
-
+                text-align: center;
             }
         </style>
 </head>
