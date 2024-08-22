@@ -19,7 +19,7 @@ use App\Http\Controllers\StoreController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('home');
 });
 
 Route::get('/home', function () {
@@ -70,9 +70,10 @@ Route::get("/users-top", function(){
     return view("users-toppage");
 })->name("users-top");
 
-Route::get('/recommend', function () {
-    return view('recommend');
-});
+Route::get("/recommend", function(){
+    return view("recomend");
+})->name("recommend");
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
