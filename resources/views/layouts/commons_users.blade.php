@@ -3,22 +3,29 @@
         <div class="flex items-center justify-between">
             <!-- 左側のテキスト群 -->
             <div class="flex space-x-12">
-                <h3 class="left font-semibold text-xl text-black-800 leading-tight">
+                <a href="/home" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('home') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('home') ? '#000000' : '#a1a1aa' }};">
                     トップページ
-                </h3>    
+                </a>
 
-                <h3 class="left font-semibold text-xl text-gray-400 leading-tight">
+                <a href="/recommend" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('recommend') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('recommend') ? '#000000' : '#a1a1aa' }};">
                     今日のおすすめ
-                </h3>
+                </a>
 
-                <h4 class="left font-semibold text-xl text-gray-400 leading-tight">
+                <a href="/a" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('a') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('a') ? '#000000' : '#a1a1aa' }};">
                     クエストボード
-                </h4>
+                </a>
 
-                <h4 class="left font-semibold text-xl text-gray-400 leading-tight">
+                <a href="/search" class="left font-semibold text-xl leading-tight
+                    {{ request()->is('search') ? 'text-black-800' : 'text-gray-400' }}"
+                    style="text-decoration: none; color: {{ request()->is('search') ? '#000000' : '#a1a1aa' }};">
                     店を探す
-                </h4>
-
+                </a>
             </div>
 
             <!-- 右側に寄せたいテキスト群 -->
@@ -41,24 +48,6 @@
             </div>
         </div>
     </x-slot>
+
     @yield('content')
-    <script>
-        // 左側のテキスト要素のみを取得
-        const leftTexts = document.querySelectorAll('.left');
-
-        // クリックイベントを各左側テキストに追加
-        leftTexts.forEach(text => {
-            text.addEventListener('click', function() {
-                // 全ての左側テキストをグレーにする
-                leftTexts.forEach(t => {
-                    t.classList.remove('text-black-800');
-                    t.classList.add('text-gray-400');
-                });
-
-                // クリックされたテキストを黒にする
-                this.classList.remove('text-gray-400');
-                this.classList.add('text-black-800');
-            });
-        });
-    </script>
 </x-app-layout>

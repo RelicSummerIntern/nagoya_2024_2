@@ -1,9 +1,7 @@
-@extends('layouts.commons_stores')
+@extends('layouts.commons_users')
 
 @section('content')
-
-
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>店舗情報</title>
@@ -52,11 +50,8 @@
                 line-height: 1.5;
                 margin-bottom: 20px;
                 padding: 15px; /* 内側のスペースを設定 */
-                border: 1px solid #e0e0e0; /* 四角い枠線を追加 */
-                background-color: #f9f9f9; /* 背景色を設定（必要に応じて変更可能） */
             }
             .contact-info {
-                background-color: #f9f9f9;
                 padding: 10px;
                 border-top: 1px solid #e0e0e0;
                 text-align: left;
@@ -85,16 +80,17 @@
                 <img src="images/sample.jpg" alt="店舗画像">
             </div>
             <div class="shop-info">
-                <h1>{{ $store->name }}</h1>
-                <p>オープン日: {{ $store->opening_year }} 年 {{ $store->opening_month }} 月 {{ $store->opening_day }} 日</p>
+                <h1>よよい軒</h1>
+                <p>オープン日: 2024 年 8 月 19 日</p>
             </div>
             <div class="description">
-                <p></p>
+                <p>説明：ここに店舗の説明文が入ります。お店の特徴や提供するサービスについて詳しく書かれています。</p>
             </div>
             <div class="contact-info">
                 <p>住所: T450-0002 愛知県名古屋市中村区名駅4丁目7-1</p>
                 <p>電話番号: 090-0000-0000</p>
                 <p>メールアドレス: example@gmail.com</p>
+                
             </div>
             <div class="social-icons">
                     <a href="https://www.twitter.com/" target="_blank">

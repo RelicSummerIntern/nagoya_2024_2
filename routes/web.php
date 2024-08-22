@@ -47,6 +47,14 @@ Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index
 
 Route::get('/storesmypage', [StoreController::class, 'index'])->name('Store.index');
 
+Route::get('/users-storespage', function () {
+    return view('users-storespage');
+})->name('users-storespage');
+
+Route::get('/mypage', function () {
+    return view('mypage');
+})->name('mypage');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
