@@ -12,4 +12,10 @@ class StoreController extends Controller
         $store = Store::find($id);
         return view('storesmypage', ['store' => $store]);
     }
+
+    public function show($id)
+    {
+        $store = Store::find($id);
+        return view('users-storespage', ['store' => $store]);
+    }
 }

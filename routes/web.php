@@ -40,7 +40,7 @@ Route::get("/template/stores", function (){
 
     Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
     Route::get('/storesmypage/{id}', [StoreController::class, 'index'])->name('Store.index');
-    Route::get('/users-storespage', [StoreController::class, 'show'])->name('Store.show');
+    Route::get('/users-storespage/{id}', [StoreController::class, 'show'])->name('Store.show');
 
 Route::get('/users-storespage', function () {
     return view('users-storespage');
@@ -61,6 +61,10 @@ Route::get('/quest_board/quest_user2', function (){
 Route::get('/quest_board/quest_user3', function (){
     return view('quest_user3');
 })->name('quest_user3');
+
+Route::get("/users-top", function(){
+    return view("users-toppage");
+})->name("users-top");
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

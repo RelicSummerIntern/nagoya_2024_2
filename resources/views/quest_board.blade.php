@@ -59,29 +59,37 @@
         text-align:left;
     }
 
+    a {
+    color: inherit; /* リンクの色を親要素の色に合わせる */
+    text-decoration: none; /* 下線を削除する */
+}
+
+
 
     
 </style>
     <main>
     @foreach($quests as $quest)
-        <div class="quest_board">
-            <div class="quest_board_h">
-                <h2 class="store_name">{{ $quest->store->name }}</h2>
-                <p class="store_open_day">{{ $quest->store->opening_year }} 年 {{ $quest->store->opening_month }} 月 {{$quest->store->opening_day }} 日</p>
-            </div>
-
-            <div class="quest_board_b">
-                <div>
-                    <p class="store_explanation">{{ $quest->store->discription }}</p>
-                    <p class="store_address">{{ $quest->store->postal_code }}  {{ $quest->store->address }}  {{ $quest->store->building_name }}</p>
+        <a href="{{ route('Store.show', ['id' => $quest->store->id]) }}">
+            <div class="quest_board">
+                <div class="quest_board_h">
+                    <h2 class="store_name">{{ $quest->store->name }}</h2>
+                    <p class="store_open_day">{{ $quest->store->opening_year }} 年 {{ $quest->store->opening_month }} 月 {{$quest->store->opening_day }} 日</p>
                 </div>
-                
-                <!-- 実際はimg -->
-                <a href="/quest_board/quest_user1" style="margin-top: 20px;">
-                    <img src="{{ asset('images/quest_logo1.png') }}" width="100" height="100">
-                </a>
+
+                <div class="quest_board_b">
+                    <div>
+                        <p class="store_explanation">{{ $quest->store->discription }}</p>
+                        <p class="store_address">{{ $quest->store->postal_code }}  {{ $quest->store->address }}  {{ $quest->store->building_name }}</p>
+                    </div>
+                    
+                    <!-- 実際はimg -->
+                    <a href="/quest_board/quest_user1" style="margin-top: 20px;">
+                        <img src="{{ asset('images/quest_logo1.png') }}" width="100" height="100">
+                    </a>
+                </div>
             </div>
-        </div>
+        </a>
     @endforeach
 
             
