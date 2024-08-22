@@ -28,10 +28,7 @@
             }
             .recomend_text {
                 text-align: left;
-            }
-            a {
-                text-align: center;
-                color: gray;
+                font-size: 30px
             }
             .return {
                 padding: 10px 20px;
@@ -45,6 +42,13 @@
                 transition: background-color 0.3s;
                 text-decoration: none;
                 text-align: center;
+            }
+            .botton{
+                margin: 30px 0;
+                background-color: lightgray;
+                font-weight: bold;
+                border-radius: 10px; /* 角を少し丸くする */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
             }
         </style>
 </head>
@@ -63,9 +67,11 @@
             </ol>
         </div>
     </div>
-    <a href="{{ route('Quest.index') }}" class="return">
+    <div class="botton">
+        <a href="{{ route('Quest.index') }}" class="return">
             クエストボードに移動
-    </a>
+        </a>
+    </div>
 </body>
 
 @endsection
