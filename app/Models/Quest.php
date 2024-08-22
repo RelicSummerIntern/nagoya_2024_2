@@ -19,4 +19,11 @@ class Quest extends Model
         'is_completed',
         // 必要に応じて他のフィールドも追加
     ];
+
+    public function clearCount()
+    {
+        // クリア数をカウントするためのロジック
+        // 例: Questのレコードに対するクリア済みフラグを持っている場合
+        return $this->where('is_completed', true)->count();
+    }
 }
