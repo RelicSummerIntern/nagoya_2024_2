@@ -60,9 +60,13 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     
 
-                    <x-nav-link :href="route('Store.index')" :active="request()->routeIs('Store.index')" class="box-link">
-                        {{ __('マイページ') }}
-                    </x-nav-link>
+
+                <x-nav-link :href="route('mypage')" :active="request()->routeIs('mypage')" 
+                    class="box-link custom-no-underline {{ request()->routeIs('mypage') ? 'text-black font-extrabold' : '' }}" 
+                    style="text-decoration: none !important;">
+                    {{ __('マイページ') }}
+                </x-nav-link>
+
                 </div>
                 @endauth
             </div>

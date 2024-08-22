@@ -89,12 +89,12 @@
                 <p>オープン日: {{ $store->opening_year }} 年 {{ $store->opening_month }} 月 {{ $store->opening_day }} 日</p>
             </div>
             <div class="description">
-                <p>説明：ここに店舗の説明文が入ります。お店の特徴や提供するサービスについて詳しく書かれています。</p>
+                <p>{{ $store->discription }}</p>
             </div>
                 <div class="contact-info">
-                    <p>住所: {{ $store->postal_code }} 愛知県名古屋市中村区名駅4丁目7-1</p>
-                    <p>電話番号: 090-0000-0000</p>
-                    <p>メールアドレス: example@gmail.com</p>
+                    <p>住所: {{ $store->postal_code }} {{ $store->address }}</p>
+                    <p>電話番号: {{ $store->phone_number }}</p>
+                    <p>メールアドレス: {{ $store->email }}</p>
                     <div class="social-icons">
                     <a href="https://www.twitter.com/" target="_blank">
                         <img src="{{ asset('images/twitter-icon.png') }}" alt="Twitter" width="30" height="30">
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="footer">
-                <p>&copy; 2024 店舗名. All Rights Reserved.</p>
+                <p>&copy; 2024 {{ $store->name }}. All Rights Reserved.</p>
             </div>
         </div>
     </body>
