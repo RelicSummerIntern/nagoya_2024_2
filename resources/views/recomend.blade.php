@@ -29,6 +29,14 @@
             .recomend_text {
                 text-align: left;
             }
+            a {
+                color: #EEE;
+                font-size: 20px;
+                background-color: #000;
+                border: solid 5px black;
+                border-radius: 100px;
+                display: inline-block;
+            }
         </style>
 </head>
 <body>
@@ -46,6 +54,7 @@
             </ol>
         </div>
     </div>
+    <a href="/quest_board">クエストボードに移動</a>
 </body>
 
 @endsection
