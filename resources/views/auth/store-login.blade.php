@@ -11,16 +11,16 @@
                 <div class="w-1/2 bg-gray-300 h-1"></div>
             </div>
             
-            <a href="#" class="bg-gray-300 text-gray-800 px-6 py-3 rounded w-1/2 font-bold text-lg text-center block relative z-10">
+            <a href="{{ route('login') }}" class="text-gray-800 px-6 py-3 rounded w-1/2 font-bold text-lg text-center block relative z-10">
                 個人用
             </a>
-            <a href="{{ route('store-login') }}" class="text-gray-800 px-6 py-3 rounded w-1/2 font-bold text-lg text-center block relative z-10">
+            <a href="#" class="bg-gray-300 text-gray-800 px-6 py-3 rounded w-1/2 font-bold text-lg text-center block relative z-10">
                 ビジネス用
             </a>
         </div>
     </div>
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('store-login') }}">
         @csrf
 
         <!-- Email Address -->
