@@ -7,6 +7,7 @@
         <title>今日のオススメ</title>
         <style>
             body {
+
                 font-family: Arial, sans-serif;
                 background-color: #f4f4f4;
                 margin: 0;
@@ -57,9 +58,16 @@
                 text-decoration: none;
                 text-align: center;
             }
+            .address{
+                font-size:13px;
+            }
+            .discription{
+                font-size:10px;
+            }
         </style>
 </head>
 <body>
+    <main>
     <div class="recent_open">
         <div class="container">
             <div class="header">
@@ -67,16 +75,16 @@
             </div>
             <div class="recomend_text">
                 <ol>
-                    <li>店舗名:</li>
-                    <li>ジャンル:</li>
-                    <li>住所:</li>
-                    <li>電話番号:</li>
-                    <li>その他・詳細:</li>
+                    <li>{{ $store->name }}</li>
+                    <li class="address">〒{{ $store->postal_code }} {{ $store->address }} {{ $store->building_name }}</li>
+                    <li class="address">{{ $store->phone_number }}</li>
+                    <li class="discription">{{ $store->discription }}</li>
                 </ol>
             </div>
         </div>
         
     </div>
+
     <a href="{{ route('Quest.index') }}" class="return">
         クエストボードに移動
     </a>

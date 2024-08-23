@@ -49,7 +49,6 @@ Route::get('/mypage', function () {
     return view('mypage');
 })->name('mypage');
 
-Route::get('/quest_board/quest_user1', [QuestController::class, 'coupon'])->name('Quest.coupon');
 
 Route::get('/quest_board/quest_user2', function (){
     return view('quest_user2');
@@ -64,13 +63,8 @@ Route::get("/users-top", function(){
     return view("users-toppage");
 })->name("users-top");
 
-Route::get("/recommend", function(){
-    return view("recommend");
-})->name("recommend");
 
-Route::get("/search", function(){
-    return view("store-search");
-})->name("store-search");
+
 
 
 Route::middleware('auth')->group(function () {
@@ -84,6 +78,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/post/{id}', [PostController::class, 'edit'])->name('post.edit');
     Route::patch('/post/{id}', [PostController::class, 'update'])->name('post.update');
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
+    Route::get('/quest_board/quest_user1/{quest}', [QuestController::class, 'coupon'])->name('Quest.coupon');
+    Route::post('/quest_board/{quest}/quest_user1', [QuestController::class, 'markAsCompleted'])->name('quest.complete');
+    Route::get("/search", [StoreController::class, 'shows'])->name('store-search');
+    Route::get("/recommend", [StoreController::class, 'good'])->name('recommend');
+
+    
+     
 
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 
@@ -102,8 +103,7 @@ Route::middleware('auth')->group(function () {
     // Route::get('/store-input', function () {
     //     return view('store-input');
     // })->name('store-input');
-    Route::get('/stores/create', [StoreController::class, 'create'])->name('stores.create');
-    Route::post('/stores/create', [StoreController::class, 'store'])->name('stores.store');
+
 
 });
 
