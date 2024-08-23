@@ -24,6 +24,11 @@ class Quest extends Model
     {
         // クリア数をカウントするためのロジック
         // 例: Questのレコードに対するクリア済みフラグを持っている場合
-        return $this->where('is_completed', true)->count();
+        return $this->is_completed ? 1 : 0;
+    }
+    public static function totalClearCount()
+    {
+        // 全クエストの中でis_completedがtrueの数を合計する
+        return self::where('is_completed', true)->count();
     }
 }
