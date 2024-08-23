@@ -75,6 +75,7 @@
                 <div class="quest_board_h">
                     <h2 class="store_name">{{ $quest->store->name }}</h2>
                     <p class="store_open_day">{{ $quest->store->opening_year }} 年 {{ $quest->store->opening_month }} 月 {{$quest->store->opening_day }} 日</p>
+                    {{ $clearCounts[$quest->id] }}
                 </div>
 
                 <div class="quest_board_b">
@@ -85,7 +86,7 @@
                     
                     <!-- 実際はimg -->
                     <a href="/quest_board/quest_user1" style="margin-top: 20px;">
-                        <img src="{{ asset('images/quest_logo1.png') }}" width="100" height="100">
+                        <img src="{{ asset('images/quest_logo1.png') }}" width="100%" height="auto">
                     </a>
                 </div>
             </div>

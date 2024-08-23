@@ -70,6 +70,11 @@ Route::get("/users-top", function(){
     return view("users-toppage");
 })->name("users-top");
 
+Route::get("/recommend", function(){
+    return view("recommend");
+})->name("recommend");
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -100,5 +105,9 @@ Route::middleware('auth')->group(function () {
 
 });
 
+Route::middleware('auth:store_user')->group(function () {
+    Route::get('/stores/create', [StoreController::class, 'create'])->name('stores.create');
+    Route::post('/stores/create', [StoreController::class, 'store'])->name('stores.store');
+});
 require __DIR__.'/auth.php';
 

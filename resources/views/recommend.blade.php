@@ -28,14 +28,27 @@
             }
             .recomend_text {
                 text-align: left;
+                font-size: 30px
             }
-            a {
-                color: #EEE;
-                font-size: 20px;
-                background-color: #000;
-                border: solid 5px black;
-                border-radius: 100px;
-                display: inline-block;
+            .return {
+                padding: 10px 20px;
+                background-color: #ccc;
+                color: black;
+                font-size: 18px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                text-decoration: none;
+                text-align: center;
+            }
+            .botton{
+                margin: 30px 0;
+                background-color: lightgray;
+                font-weight: bold;
+                border-radius: 10px; /* 角を少し丸くする */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
             }
         </style>
 </head>
@@ -54,7 +67,11 @@
             </ol>
         </div>
     </div>
-    <a href="/quest_board">クエストボードに移動</a>
+    <div class="botton">
+        <a href="{{ route('Quest.index') }}" class="return">
+            クエストボードに移動
+        </a>
+    </div>
 </body>
 
 @endsection
