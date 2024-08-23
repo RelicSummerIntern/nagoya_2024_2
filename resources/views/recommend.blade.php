@@ -28,7 +28,7 @@
             }
             .recomend_text {
                 text-align: left;
-                font-size: 40px
+                font-size: 80px
             }
             .return {
                 width: 960px;
