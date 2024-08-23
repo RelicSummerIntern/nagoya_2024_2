@@ -31,7 +31,8 @@
                 font-size: 40px
             }
             .return {
-                margin: 30px 0;
+                width: 960px;
+                margin: auto;
                 padding: 10px 20px;
                 background-color: #ccc;
                 color: black;
