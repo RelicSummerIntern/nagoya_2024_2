@@ -12,6 +12,15 @@
             margin: 0;
             padding: 0;
             }
+            .recent_open {
+                margin: 40px 0;
+                background-color: white;
+                padding: 40px; /* パディングを増やして、全体の高さを調整 */
+                font-size: 30px;
+                font-weight: bold;
+                border-radius: 10px; /* 角を少し丸くする */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
+            }
             .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -48,23 +57,25 @@
         </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="images/sample.jpg" alt="店舗画像">
+    <div class="recent_open">
+        <div class="container">
+            <div class="header">
+                <img src="images/sample.jpg" alt="店舗画像">
+            </div>
+            <div class="rocomend_text">
+                <ol>
+                    <li>店舗名:</li>
+                    <li>ジャンル:</li>
+                    <li>住所:</li>
+                    <li>電話番号:</li>
+                    <li>その他・詳細:</li>
+                </ol>
+            </div>
         </div>
-        <div class="rocomend_text">
-            <ol>
-                <li>店舗名:</li>
-                <li>ジャンル:</li>
-                <li>住所:</li>
-                <li>電話番号:</li>
-                <li>その他・詳細:</li>
-            </ol>
-        </div>
-    </div>
         <a href="{{ route('Quest.index') }}" class="return">
             クエストボードに移動
         </a>
+    </div>
 </body>
 
 @endsection
