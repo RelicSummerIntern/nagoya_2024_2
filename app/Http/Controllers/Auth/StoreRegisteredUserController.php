@@ -58,6 +58,8 @@ class StoreRegisteredUserController extends Controller
 
         session()->flash('success', '会員登録に成功しました。');
 
+        session()->regenerate();
+
         return redirect()->route('stores.create');
     }
 }
