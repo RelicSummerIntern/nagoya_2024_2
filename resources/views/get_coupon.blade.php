@@ -20,12 +20,12 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center
+            text-align: center;
         }
-        a {
-            text-align: center
-            color: gray;
+        .a {
+            text-align: center;
         }
+        
         h1 {
             color: #333;
         }
@@ -55,6 +55,21 @@
             margin-left: 10px;
             color: #000;
         }
+        .return {
+                width: 960px;
+                margin: auto;
+                padding: 10px 20px;
+                background-color: #ccc;
+                color: black;
+                font-size: 18px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                text-decoration: none;
+                text-align: center;
+            }
     </style>
 </head>
 
@@ -65,7 +80,9 @@
         <h4>クーポン獲得まで 7/7</h4>
         <div style="border: 1px solid; background-color: #00ffff;"><h3>クーポンゲット！<h3></div>
     </div>
-    <a href="/quest_board">クエストボードに戻る</a>
+    <a href="{{ route('Quest.index') }}" class="return">
+        クエストボードに戻る
+    </a>
 </body>
 
 @endsection

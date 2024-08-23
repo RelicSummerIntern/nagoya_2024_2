@@ -16,7 +16,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             }
-            @media (max-width: 576px){
+            @media (max-width: 782px){
                 .container{
                 display: flex;
                 flex-direction: column;
@@ -28,7 +28,7 @@
             }
             .recomend_text {
                 text-align: left;
-                font-size: 30px
+                font-size: 40px
             }
             .return {
                 margin: 30px 0;
