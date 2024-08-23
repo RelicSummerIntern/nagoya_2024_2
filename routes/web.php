@@ -71,7 +71,7 @@ Route::get("/users-top", function(){
 })->name("users-top");
 
 Route::get("/recommend", function(){
-    return view("recomend");
+    return view("recommend");
 })->name("recommend");
 
 
