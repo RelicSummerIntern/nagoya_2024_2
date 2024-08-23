@@ -1,4 +1,4 @@
-@extends('layouts.commons_users')
+@extends('layouts.commons_stores')
 
 @section('content')
 

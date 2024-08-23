@@ -4,7 +4,7 @@
             <!-- 左側のテキスト群 -->
             <div class="flex space-x-12">
 
-                <a href="{{ url('/quest-summary*') }}" class="left font-semibold text-xl leading-tight
+                <a href="{{ route('stores_number_form') }}}}" class="left font-semibold text-xl leading-tight
                     {{ request()->is('quest-summary*') ? 'text-black' : 'text-gray-400' }}" 
                     style="text-decoration: none; color: {{ request()->is('quest-summary*') ? '#000000' : '#a1a1aa' }};">
                     クエスト集計
