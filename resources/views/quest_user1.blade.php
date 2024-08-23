@@ -84,9 +84,9 @@
             <p class="textbox">
                 <input type="text" id="code" name="code" class="text_box" placeholder="あいことば" required>
             </p>
-            <button class="send">
+            <a href="{{ route('quest_user2') }}" class="send">
                 送信
-            </button>
+            </a>
         </div>
 
         <a href="{{ route('Quest.index') }}" class="return">

@@ -30,12 +30,21 @@
                 text-align: left;
             }
             a {
-                color: #EEE;
-                font-size: 20px;
-                background-color: #000;
-                border: solid 5px black;
-                border-radius: 100px;
-                display: inline-block;
+                text-align: center;
+                color: gray;
+            }
+            .return {
+                padding: 10px 20px;
+                background-color: #ccc;
+                color: black;
+                font-size: 18px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                text-decoration: none;
+                text-align: center;
             }
         </style>
 </head>
@@ -54,7 +63,9 @@
             </ol>
         </div>
     </div>
-    <a href="/quest_board">クエストボードに移動</a>
+    <a href="{{ route('Quest.index') }}" class="return">
+            クエストボードに移動
+    </a>
 </body>
 
 @endsection

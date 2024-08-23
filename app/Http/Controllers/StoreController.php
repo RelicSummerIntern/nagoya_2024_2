@@ -76,9 +76,5 @@ class StoreController extends Controller
         return view('users-storespage', ['store' => $store]);
     }
 
-    public function coupon()
-    {
-        
-        return view('quest_user1');
-    }
+
 }

@@ -45,8 +45,7 @@
     }
 
     .refresh {
-        width: 90px; /* 幅を設定 */
-        height: 50px; /* 高さを設定 */
+        padding: 15px 20px;
         background-color: #ccc; /* 背景色 */
         color: black;
         font-size: 18px;
@@ -95,9 +94,9 @@
                 <p>認証コード</p>
                 <p class="code">000</p>
             </div>
-            <button class="refresh">
+            <a href="{{ route('quest_user3') }}" class="refresh">
                 更新
-            </button>
+            </a>
         </div>
 
         

@@ -85,7 +85,7 @@
             </p>
             <div class="centertext">
                 <span class="lefttext">クーポン獲得まで</span>
-                <span class="righttext"><span class="font-extrabold text-20px text-red-600 leading-tight">5</span>/7</span>
+                <span class="righttext"><span class="font-extrabold text-20px text-red-600 leading-tight">{{ $totalClearCount }}</span>/7</span>
             </div>
             
             <div class="black-box">クーポンGET！</div>

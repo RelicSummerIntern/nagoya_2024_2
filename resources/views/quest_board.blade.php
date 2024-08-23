@@ -75,7 +75,6 @@
                 <div class="quest_board_h">
                     <h2 class="store_name">{{ $quest->store->name }}</h2>
                     <p class="store_open_day">{{ $quest->store->opening_year }} 年 {{ $quest->store->opening_month }} 月 {{$quest->store->opening_day }} 日</p>
-                    
                 </div>
 
                 <div class="quest_board_b">
@@ -85,9 +84,15 @@
                     </div>
                     
                     <!-- 実際はimg -->
-                    <a href="/quest_board/quest_user1" style="margin-top: 20px;">
-                        <img src="{{ asset('images/quest_logo1.png') }}" width="100%" height="auto">
-                    </a>
+                    @if ($quest->is_completed == 0)
+                        <a href="/quest_board/quest_user1" style="margin-top: 20px;">
+                            <img src="{{ asset('images/quest_logo1.png') }}" width="100%" height="auto">
+                        </a>
+                    @else
+                        <div>
+                            <img src="{{ asset('images/quest_logo2.png') }}" alt="クリア" width ="100%" height="auto">
+                        </div>
+                    @endif
                 </div>
             </div>
         </a>
