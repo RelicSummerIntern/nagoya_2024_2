@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StoreProfileController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestController;
@@ -19,7 +20,7 @@ use App\Http\Controllers\StoreController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('auth.login');
 });
 
 Route::get('/home', function () {
@@ -38,9 +39,7 @@ Route::get("/template/stores", function (){
 
 
 
-    Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
-    Route::get('/storesmypage/{id}', [StoreController::class, 'index'])->name('Store.index');
-    Route::get('/users-storespage/{id}', [StoreController::class, 'show'])->name('Store.show');
+
 
 Route::get('/users-storespage', function () {
     return view('users-storespage');
@@ -60,9 +59,6 @@ Route::get('/quest_board/quest_user3', function (){
     return view('quest_user3');
 })->name('quest_user3');
 
-Route::get('/quest-summary/authenticate', function (){
-    return view('stores_number_form');
-})->name('stores_number_form');
 
 Route::get("/users-top", function(){
     return view("users-toppage");
@@ -93,6 +89,10 @@ Route::middleware('auth')->group(function () {
         return view('store-input');
     })->name('store-input');
 
+    Route::get('/quest_board', [QuestController::class, 'index'])->name('Quest.index');
+    Route::get('/storesmypage/{id}', [StoreController::class, 'index'])->name('Store.index');
+    Route::get('/users-storespage/{id}', [StoreController::class, 'show'])->name('Store.show');
+
     
 
     // Route::get('/store-input', function () {
@@ -104,8 +104,15 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth:store_user')->group(function () {
+    // Route::get('/profile', [StoreProfileController::class, 'edit'])->name('profile.edit');
+    // Route::patch('/profile', [StoreProfileController::class, 'update'])->name('profile.update');
+    // Route::delete('/profile', [StoreProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/stores/create', [StoreController::class, 'create'])->name('stores.create');
     Route::post('/stores/create', [StoreController::class, 'store'])->name('stores.store');
+    Route::get('/quest-summary/authenticate', function (){
+        return view('stores_number_form');
+    })->name('stores_number_form');
+    
 });
 
 require __DIR__.'/auth.php';

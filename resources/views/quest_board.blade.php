@@ -86,11 +86,11 @@
                     <!-- 実際はimg -->
                     @if ($quest->is_completed == 0)
                         <a href="/quest_board/quest_user1" style="margin-top: 20px;">
-                            <img src="{{ asset('images/quest_logo1.png') }}" width="100%" height="auto">
+                            <img src="{{ asset('images/quest_logo1.png') }}" width="30%" height="auto" style="float: right;">
                         </a>
                     @else
                         <div>
-                            <img src="{{ asset('images/quest_logo2.png') }}" alt="クリア" width ="100%" height="auto">
+                            <img src="{{ asset('images/quest_logo2.png') }}" alt="クリア" width ="30%" height="auto" style="float: right;">
                         </div>
                     @endif
                 </div>
