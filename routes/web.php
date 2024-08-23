@@ -68,6 +68,10 @@ Route::get("/recommend", function(){
     return view("recommend");
 })->name("recommend");
 
+Route::get("/search", function(){
+    return view("store-search");
+})->name("store-search");
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
