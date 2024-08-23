@@ -31,6 +31,7 @@
                 font-size: 30px
             }
             .return {
+                margin: 30px 0;
                 padding: 10px 20px;
                 background-color: #ccc;
                 color: black;
@@ -42,13 +43,6 @@
                 transition: background-color 0.3s;
                 text-decoration: none;
                 text-align: center;
-            }
-            .botton{
-                margin: 30px 0;
-                background-color: lightgray;
-                font-weight: bold;
-                border-radius: 10px; /* 角を少し丸くする */
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
             }
         </style>
 </head>
@@ -67,11 +61,9 @@
             </ol>
         </div>
     </div>
-    <div class="botton">
         <a href="{{ route('Quest.index') }}" class="return">
             クエストボードに移動
         </a>
-    </div>
 </body>
 
 @endsection
