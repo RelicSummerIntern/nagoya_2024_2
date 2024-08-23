@@ -13,7 +13,7 @@
                 </div>
 
                 <div>
-                    <span class="font-bold text-xl text-gray-800">新規事業飲食店支援アプリ
+                    <span class="font-bold text-xl text-gray-800">食えスト
                     </span>
                 </div>
                     

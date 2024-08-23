@@ -31,7 +31,7 @@ class StoreAuthenticatedSessionController extends Controller
 
             session()->flash('success', 'ログインしました!');
 
-            return redirect()->route('mypage');
+            return redirect()->route('stores_number_form');
         }
 
         return back()->withErrors([

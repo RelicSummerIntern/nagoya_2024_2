@@ -16,7 +16,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             }
-            @media (max-width: 576px){
+            @media (max-width: 782px){
                 .container{
                 display: flex;
                 flex-direction: column;
@@ -28,12 +28,11 @@
             }
             .recomend_text {
                 text-align: left;
-            }
-            a {
-                text-align: center;
-                color: gray;
+                font-size: 80px
             }
             .return {
+                width: 960px;
+                margin: auto;
                 padding: 10px 20px;
                 background-color: #ccc;
                 color: black;
@@ -63,9 +62,9 @@
             </ol>
         </div>
     </div>
-    <a href="{{ route('Quest.index') }}" class="return">
+        <a href="{{ route('Quest.index') }}" class="return">
             クエストボードに移動
-    </a>
+        </a>
 </body>
 
 @endsection

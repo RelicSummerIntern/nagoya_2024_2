@@ -60,7 +60,7 @@ class StoreController extends Controller
 
         session()->flash('success', '会員登録に成功しました。');
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect()->route('stores_number_form');
     }
 
 

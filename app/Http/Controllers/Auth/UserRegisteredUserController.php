@@ -52,8 +52,10 @@ class UserRegisteredUserController extends Controller
 
         Auth::login($user);
 
+        session()->regenerate();
+
         session()->flash('success', '会員登録に成功しました。');
 
-        return redirect()->route('/users-top');
+        return redirect()->route('users-top');
     }
 }
