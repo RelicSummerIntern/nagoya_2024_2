@@ -78,5 +78,15 @@ class StoreController extends Controller
         return view('users-storespage', ['store' => $store]);
     }
 
+    public function shows()
+    {
+        $stores = Store::all();
+        return view("store-search", ['stores' => $stores] );
+    }
+    public function good()
+    {
+        $store = Store::inRandomOrder()->limit(1)->first();
+        return view("recommend", ['store' => $store]);
+    }
 
 }

@@ -10,11 +10,12 @@
                     クエスト集計
                 </a>
 
-                <a href="{{ url('/survey-summary*') }}" class="left font-semibold text-xl leading-tight
+                <a href="{{ route('stores.create') }}" class="left font-semibold text-xl leading-tight
                     {{ request()->is('survey-summary*') ? 'text-black' : 'text-gray-400' }}" 
                     style="text-decoration: none; color: {{ request()->is('survey-summary*') ? '#000000' : '#a1a1aa' }};">
-                    アンケート集計
+                    店舗の追加
                 </a>
+
             </div>
         </div>
     </x-slot>

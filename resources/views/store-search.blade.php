@@ -69,17 +69,18 @@
     
 </style>
     <main>
+    @foreach ($stores as $store)
         <a href>
             <div class="quest_board">
                 <div class="quest_board_h">
-                    <h2 class="store_name">油そば佐の藤</h2>
-                    <p class="store_open_day">オープン日：2024年 8月 23日</p>
+                    <h2 class="store_name">{{ $store->name }}</h2>
+                    <p class="store_open_day">オープン日： {{ $store->opening_year }} 年 {{ $store->opening_month }} 月 {{ $store->opening_day }} 日</p>
                 </div>
 
                 <div class="quest_board_b">
                     <div>
-                        <p class="store_explanation">油たっぷりでめっちゃうまい！</p>
-                        <p class="store_address">〒464-0000 愛知県名古屋市中区〇〇町1-3 からまぜビル1階</p>
+                        <p class="store_explanation">{{ $store->discriptionn }}</p>
+                        <p class="store_address">〒{{ $store->postal_code }} {{ $store->address}} {{ $store->building_name}}</p>
                     </div>
                     
                     <!-- 実際はimg -->
@@ -87,86 +88,10 @@
                 </div>
             </div>
         </a>
+    @endforeach
 
-        <a href>
-            <div class="quest_board">
-                <div class="quest_board_h">
-                    <h2 class="store_name">ラーメン三郎</h2>
-                    <p class="store_open_day">オープン日：2024年 3月 14日</p>
-                </div>
+     
 
-                <div class="quest_board_b">
-                    <div>
-                        <p class="store_explanation">ニンニクヤサイアブラマシマシできます！
-                        </p>
-                        <p class="store_address">〒123-0000 東京都〇〇区〇〇町2-3 夢を語るビル12階</p>
-                    </div>
-                    
-                    <!-- 実際はimg -->
-                    
-                </div>
-            </div>
-        </a>
-
-        <a href>
-            <div class="quest_board">
-                <div class="quest_board_h">
-                    <h2 class="store_name">混喫茶あんこ</h2>
-                    <p class="store_open_day">オープン日：2024年 5月 1日</p>
-                </div>
-
-                <div class="quest_board_b">
-                    <div>
-                        <p class="store_explanation">名物四あんこサンドを是非ご賞味あれ！　¥32,000からテイクアウトも可能！
-                        </p>
-                        <p class="store_address">〒180-0001 三重県〇〇市〇〇町4-5 天和ビル3階</p>
-                    </div>
-                    
-                    <!-- 実際はimg -->
-                    
-                </div>
-            </div>
-        </a>
-            
-        <a href>
-            <div class="quest_board">
-                <div class="quest_board_h">
-                    <h2 class="store_name">C.C.Cafe</h2>
-                    <p class="store_open_day">オープン日：2024年 4月 1日</p>
-                </div>
-
-                <div class="quest_board_b">
-                    <div>
-                        <p class="store_explanation">本格ピザで自分も、世界さえも変えてしまうような安らぎのひとときを。
-                        </p>
-                        <p class="store_address">〒000-0000 東京都〇〇区〇〇町0-0 </p>
-                    </div>
-                    
-                    <!-- 実際はimg -->
-                    
-                </div>
-            </div>
-        </a>
-
-        <a href>
-            <div class="quest_board">
-                <div class="quest_board_h">
-                    <h2 class="store_name">金だこ</h2>
-                    <p class="store_open_day">オープン日：2024年 7月 7日</p>
-                </div>
-
-                <div class="quest_board_b">
-                    <div>
-                        <p class="store_explanation">ゴリゴリに焼かれたたこ焼きを食べたらあなたも終わりです！
-                        </p>
-                        <p class="store_address">〒000-0000 宮城県仙台市国分町0-0 </p>
-                    </div>
-                    
-                    <!-- 実際はimg -->
-                    
-                </div>
-            </div>
-        </a>
 
         
     </main>

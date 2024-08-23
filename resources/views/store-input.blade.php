@@ -1,10 +1,6 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            トップページ
-        </h2>
-    </x-slot>
+@extends('layouts.commons_stores')
 
+@section('content')
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden">
@@ -143,5 +139,5 @@
         }
     });
     </script>
-</x-guest-layout>
+@endsection
 
