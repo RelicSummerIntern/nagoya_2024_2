@@ -58,6 +58,8 @@ class StoreController extends Controller
 
         Auth::guard('store')->login($Store);
 
+        session()->regenerate();
+
         session()->flash('success', '会員登録に成功しました。');
 
         return redirect()->route('stores_number_form');
