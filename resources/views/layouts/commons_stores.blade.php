@@ -3,11 +3,6 @@
         <div class="flex items-center justify-between">
             <!-- 左側のテキスト群 -->
             <div class="flex space-x-12">
-                <a href="{{ url('/home') }}" class="left font-semibold text-xl leading-tight
-                    {{ request()->is('home') ? 'text-black' : 'text-gray-400' }}" 
-                    style="text-decoration: none; color: {{ request()->is('home') ? '#000000' : '#a1a1aa' }};">
-                    トップページ
-                </a>
 
                 <a href="{{ url('/quest-summary*') }}" class="left font-semibold text-xl leading-tight
                     {{ request()->is('quest-summary*') ? 'text-black' : 'text-gray-400' }}" 

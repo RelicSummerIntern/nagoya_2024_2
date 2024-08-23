@@ -85,11 +85,11 @@
                     
                     <!-- 実際はimg -->
                     @if ($quest->is_completed == 0)
-                        <a href="/quest_board/quest_user1" style="margin-top: 20px;">
+                        <<a href="{{ route('Quest.coupon', ['quest' => $quest->id]) }}" style="margin-top: 20px;">
                             <img src="{{ asset('images/quest_logo1.png') }}" width="100%" height="auto">
                         </a>
                     @else
-                        <div>
+                        <div style="margin-top: 20px;">
                             <img src="{{ asset('images/quest_logo2.png') }}" alt="クリア" width ="100%" height="auto">
                         </div>
                     @endif

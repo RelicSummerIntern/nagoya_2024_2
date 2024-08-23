@@ -50,7 +50,6 @@ Route::get('/mypage', function () {
     return view('mypage');
 })->name('mypage');
 
-Route::get('/quest_board/quest_user1', [QuestController::class, 'coupon'])->name('Quest.coupon');
 
 Route::get('/quest_board/quest_user2', function (){
     return view('quest_user2');
@@ -84,7 +83,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/post/{id}', [PostController::class, 'edit'])->name('post.edit');
     Route::patch('/post/{id}', [PostController::class, 'update'])->name('post.update');
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
-
+    Route::get('/quest_board/quest_user1/{quest}', [QuestController::class, 'coupon'])->name('Quest.coupon');
+    Route::post('/quest_board/{quest}/quest_user1', [QuestController::class, 'markAsCompleted'])->name('quest.complete');
+    
     Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
 
     // 店用
